@@ -3,7 +3,7 @@ const http = require('http');
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
     // Make a GET request to the backend API
-    http.get('http://backend.mms.com:8000/api/data', (apiRes) => {
+    http.get('http://api.mms.com:8000/api/data', (apiRes) => {
       let data = '';
 
       apiRes.on('data', (chunk) => {
